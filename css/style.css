@@ -74,13 +74,15 @@ header ul li a:hover {
 }
 
 .main h1 {
+  opacity: 0;
   color: #fff;
   width: 50vw;
   font-size: 50px;
   text-align: center;
-  padding: 30vh 20px 20px;
+  padding: 50vh 20px 20px;
   border-radius: 20px;
   margin: 0 auto;
+  transition: padding 1s , opacity 1s;
 }
 
 .main h1 span {
@@ -88,6 +90,7 @@ header ul li a:hover {
 }
 
 .main p {
+  opacity : 0;
   color: #bed0d9;
   font-size: 20px;
   width: 40vw;
@@ -96,6 +99,7 @@ header ul li a:hover {
   background-color: rgba(0, 0, 0, 0.3);
   padding: 20px;
   line-height: 1.5;
+  transition : opacity 1s 1s;
 }
 
 .main .btn {
@@ -103,6 +107,8 @@ header ul li a:hover {
   justify-content: center;
   width: 100vw;
   margin: 20px auto;
+  opacity : 0;
+  transition : opacity 1s 5s;
 }
 
 .main .btn a {
