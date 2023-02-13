@@ -1,13 +1,13 @@
 /* global styling */
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-/* start header styling */
+/* start header styling index.html */
 
 header {
   width: 100%;
@@ -57,9 +57,9 @@ header ul li a:hover {
   color: #00aaff;
 }
 
-/* end header styling */
+/* end header styling index.html */
 
-/* start main styling */
+/* start main styling index.html */
 
 .main {
   height: 100vh;
@@ -82,7 +82,7 @@ header ul li a:hover {
   padding: 50vh 20px 20px;
   border-radius: 20px;
   margin: 0 auto;
-  transition: padding 1s , opacity 1s;
+  transition: padding 1s, opacity 1s;
 }
 
 .main h1 span {
@@ -90,7 +90,7 @@ header ul li a:hover {
 }
 
 .main p {
-  opacity : 0;
+  opacity: 0;
   color: #bed0d9;
   font-size: 20px;
   width: 40vw;
@@ -99,7 +99,7 @@ header ul li a:hover {
   background-color: rgba(0, 0, 0, 0.3);
   padding: 20px;
   line-height: 1.5;
-  transition : opacity 1s 1s;
+  transition: opacity 1s 1s;
 }
 
 .main .btn {
@@ -107,8 +107,8 @@ header ul li a:hover {
   justify-content: center;
   width: 100vw;
   margin: 20px auto;
-  opacity : 0;
-  transition : opacity 1s 5s;
+  opacity: 0;
+  transition: opacity 1s 5s;
 }
 
 .main .btn a {
@@ -126,145 +126,135 @@ header ul li a:hover {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-/* end main styling */
-  
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-  
+/* end main styling index.html */
+
+/* start styling yassine */
+
 .container {
-    font-family: "Montserrat", sans-serif;
-    background: #023047;
-    color: #eee;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background: #023047;
+  color: #eee;
 }
-.titel{
-    font-size: 32px;
-    font-weight: 900;
-    text-align: center;
-    color: #eee;
-    margin: 16px;
-
+.titel {
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+  color: #eee;
+  margin: 16px;
 }
-.htm-converter{
-    max-width: 700px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    font-family: "Roboto",sans-serif;
+.htm-converter {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: "Roboto", sans-serif;
 }
-.htm-converter .input-text{
-    height: 350px;
-    width: 900px;
-    padding: 20px;
-    font-family: "Robote",sans-serif;
-    font-size: 18px;
-    list-style: 1.7;
-
-
+.htm-converter .input-text {
+  height: 350px;
+  width: 900px;
+  padding: 20px;
+  font-family: "Robote", sans-serif;
+  font-size: 18px;
+  list-style: 1.7;
 }
-.htm-converter .input-text{
-    resize: none;
+.htm-converter .input-text {
+  resize: none;
 }
-.reult{
-    height: 350px;
-    width: 900px;
-    padding: 20px;
-    font-family: "Robote",sans-serif;
-    font-size: 18px;
-    list-style: 1.7;
-    overflow-y: scroll;
-
+.reult {
+  height: 350px;
+  width: 900px;
+  padding: 20px;
+  font-family: "Robote", sans-serif;
+  font-size: 18px;
+  list-style: 1.7;
+  overflow-y: scroll;
 }
-.list-copy{
-    
-
+.list-copy {
 }
-.return-btn,.saved-btn,.deletd-btn,.copyy-btn{
-    height: 30px;
-    width: 30px;
-    position: relative;
-    left: 750px;
-    cursor: pointer
-
+.return-btn,
+.saved-btn,
+.deletd-btn,
+.copyy-btn {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  left: 750px;
+  cursor: pointer;
 }
 
-.heder2{
-    font-size: 15px;
-    position: relative;
-    top: 30px;
+.heder2 {
+  font-size: 15px;
+  position: relative;
+  top: 30px;
 }
-.heder3{
-    font-size: 15px;
+.heder3 {
+  font-size: 15px;
 }
-.btn64{
-    justify-content: center;
+.btn64 {
+  justify-content: center;
 }
-.btn64 .one{
-    color: #fff;
-    padding: 20px 80px;
-    background: green;
-    position: relative;
-    left: 150px;
-    font-size: 20px;
-    border-radius: 20px;
-    cursor: pointer;
+.btn64 .one {
+  color: #fff;
+  padding: 20px 80px;
+  background: green;
+  position: relative;
+  left: 150px;
+  font-size: 20px;
+  border-radius: 20px;
+  cursor: pointer;
 }
-.btn64 :active{
-    top: 3px;
+.btn64 :active {
+  top: 3px;
 }
-.tow{
-    color: #000;
-    padding: 20px 60px;
-    position: relative;
-    left: 150px;
-    font-size: 20px;
-    border-radius: 20px;
-    cursor: pointer;
-
+.tow {
+  color: #000;
+  padding: 20px 60px;
+  position: relative;
+  left: 150px;
+  font-size: 20px;
+  border-radius: 20px;
+  cursor: pointer;
 }
-.there{
-    color: #000;
-    padding: 20px 60px;
-    position: relative;
-    left: 150px;
-    font-size: 20px; 
-    border-radius: 20px;
-    cursor: pointer;
-
+.there {
+  color: #000;
+  padding: 20px 60px;
+  position: relative;
+  left: 150px;
+  font-size: 20px;
+  border-radius: 20px;
+  cursor: pointer;
 }
-.input-text-2{
-    height: 350px;
-    width: 900px;
-    padding: 20px;
-    font-family: "Robote",sans-serif;
-    font-size: 18px;
-    list-style: 1.7;
-    resize: none;
+.input-text-2 {
+  height: 350px;
+  width: 900px;
+  padding: 20px;
+  font-family: "Robote", sans-serif;
+  font-size: 18px;
+  list-style: 1.7;
+  resize: none;
 }
-.copy-btn{
-    height: 30px;
-    width: 30px;
-    position: relative;
-    left: 860px;
-    cursor: pointer;
+.copy-btn {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  left: 860px;
+  cursor: pointer;
 }
-.fore,.five{
-    color: #000;
-    padding: 15px 60px;
-    position: relative;
-    left: 350px; 
-    font-size: 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    box-shadow: 0 6px;
+.fore,
+.five {
+  color: #000;
+  padding: 15px 60px;
+  position: relative;
+  left: 350px;
+  font-size: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 6px;
 }
-.fore,.five :active{
-    top: 2px;
+.fore,
+.five :active {
+  top: 2px;
 }
-
-
-
-
