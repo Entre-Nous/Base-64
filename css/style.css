@@ -133,13 +133,14 @@ header ul li a:hover {
 .container {
   background: #023047;
   color: #eee;
+  padding-bottom : 20px;
 }
 .titel {
   font-size: 32px;
   font-weight: 900;
   text-align: center;
   color: #eee;
-  margin: 16px;
+  padding-top: 20px;
 }
 .htm-converter {
   max-width: 700px;
@@ -190,7 +191,8 @@ header ul li a:hover {
   font-size: 15px;
 }
 .btn64 {
-  justify-content: center;
+  display : flex;
+  justify-content: space-between;
 }
 .btn64 .one {
   color: #fff;
