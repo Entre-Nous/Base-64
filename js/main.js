@@ -1,5 +1,5 @@
 // les elements de notre page index.html
-let headerText = document.querySelector("h1");
+let headerText = document.querySelector(".title-index");
 let descripton = document.getElementById("desc");
 let buttons = document.getElementsByClassName("btn");
 let text =
