@@ -37,6 +37,7 @@ if (document.title === "Encode-Decode Base-64") {
   let output = document.querySelector(".input-text-2");
   let encodeBtn = document.querySelector(".one");
   let downloadDecode = document.querySelector(".five");
+  let charDecode = document.querySelector(".char");
 
   // when the of encode page is load the text area is focus
   input.focus();
@@ -112,12 +113,13 @@ if (document.title === "Encode-Decode Base-64") {
   //when click on button encodeBtn call function of encode
   encodeBtn.onclick = function () {
     output.value = encodeBase64(input);
+    // calcult the number of character of decode result
+    calcCharacter(charDecode, output);
   };
 
-  // when click on button download call function downloadFile for 
+  // when click on button download call function downloadFile for
   // downloading result of encode
-  downloadDecode.onclick = function() {
+  downloadDecode.onclick = function () {
     downloadFile(output);
-  }
-
+  };
 }
