@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Document</title>
+    <title>Encode-Base64</title>
     <script src="https://kit.fontawesome.com/9f17b184ea.js" crossorigin="anonymous"></script>
     <!-- <script src="https://kit.fontawesome.com/41849448b5.js" crossorigin="anonymous"></script> -->
 
@@ -28,7 +28,10 @@
                 <div class="liste-simpal">
                     <h2 class="heder2">Enter the text to Base64 Encod</h2>
 
-                    <button class="return-btn"><i class="fa-solid fa-upload"></i></button>
+                    <button class="return-btn">
+                        <label for = "load" class="fa-solid fa-upload"></label>
+                        <input type="file" id = "load" class = "load">
+                    </button>
                     <button class="saved-btn"><i class="fa-solid fa-trash-can"></i></button>
                     <button class="deletd-btn"><i class="fa-solid fa-floppy-disk"></i> </button>
                     <button class="copyy-btn"> <i class="fa-solid fa-copy"></i></button>
@@ -39,7 +42,7 @@
             </div>
 
             <textarea class="input-text"></textarea>
-            <h3 class="heder3">Siz:0, 0Charcters</h3>
+            <h3 class="heder3">Size: 0, 0 Characters</h3>
 
             <div class="btn64">
                 <button class="one" type="button">
