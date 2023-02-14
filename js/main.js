@@ -36,6 +36,7 @@ if (document.title === "Encode-Decode Base-64") {
   let chooseFile = document.querySelector("#load");
   let output = document.querySelector(".input-text-2");
   let encodeBtn = document.querySelector(".one");
+  let downloadDecode = document.querySelector(".five");
 
   // when the of encode page is load the text area is focus
   input.focus();
@@ -112,5 +113,11 @@ if (document.title === "Encode-Decode Base-64") {
   encodeBtn.onclick = function () {
     output.value = encodeBase64(input);
   };
+
+  // when click on button download call function downloadFile for 
+  // downloading result of encode
+  downloadDecode.onclick = function() {
+    downloadFile(output);
+  }
 
 }
