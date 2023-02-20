@@ -8,33 +8,45 @@
     <meta name="author" content="Groupe Entre Nous">
     <meta name="description"
         content="Notre outil en ligne facilite l'encodage du texte en base64 ou le décodage de base64 en texte.">
+    <script src="https://kit.fontawesome.com/9f17b184ea.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Encode-Decode Base-64</title>
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <a href="#" class="logo">entre<span>N</span>ous</a>
-        <ul>
+        <div class="logo">
+            <a href="#">Base64</a>
+        </div>
+        <i class="fas fa-bars"></i>
+        <ul class="links">
+            <li><a href="index.html">Accueil</a></li>
             <li><a href="Encord64.html">Encode</a></li>
             <li><a href="Decod64.html">Decode</a></li>
-            <li><a href="#">A Propos</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </header>
 
-    <div class="main">
-        <div class="overlay">
-            <h1 class = "title-index">Encodeur et décodeur <span>Base64</span></h1>
-            <p id="desc"></p>
-            <div class="btn">
-                <a class = "encode-btn" href="Encord64.html">Encode Base64</a>
-                <a class = "decode-btn" href="Decod64.html">Decode Base64</a>
-            </div>
+    <div class="description">
+        <h1>Encodeur et Décodeur
+            <br><span>Base64</span> Format
+        </h1>
+        <p>Notre outil en ligne facilite l'encodage du texte en base64 ou le <br>décodage de base64 en texte.</p>
+        <div class="buttons">
+            <a class="encode" href="Encord64.html">encode base64</a>
+            <a class="decode" href="Decod64.html">decode base64</a>
         </div>
     </div>
 
-    <script src="js/main.js"></script>
+    <footer>
+        <p>&copy 2023 Groupe entre nous. tout droits réservés</p>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 
 </html>

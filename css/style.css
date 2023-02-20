@@ -9,254 +9,325 @@
 
 /* start header styling index.html */
 
+/* start global styling */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  /* background-color: #739ac733; */
+}
+
+/* end global styling */
+
+.show-menu {
+  top: 0 !important;
+}
+
+/* start styling of page index */
+
+/* start header styling */
 header {
-  width: 100%;
   height: 70px;
-  position: fixed;
   display: flex;
-  padding: 0 50px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 100px;
 }
 
+/* logo styling */
 header .logo {
-  font-size: 45px;
-  text-decoration: none;
+  font-size: 30px;
   line-height: 70px;
-  flex: 1;
-  color: #fff;
-  font-weight: 600;
+  flex-wrap: wrap;
 }
 
-header .logo span {
-  font-size: 50px;
-  color: #00aaff;
+header .logo a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 800;
 }
 
-header ul {
+/* bars menu styling */
+header .fa-bars {
+  line-height: 70px;
+  font-size: 25px;
+  display: none;
+  cursor: pointer;
+}
+
+/* menu styling */
+header .links {
+  list-style: none;
   display: flex;
   line-height: 70px;
-  list-style: none;
+  margin: 0;
+  transition: all 0.4s;
 }
 
-header ul li {
-  padding: 0 15px;
-  font-size: 20px;
+header .links li {
+  padding: 0 25px;
   font-weight: 500;
 }
 
-header ul li:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+header .links li:hover {
+  text-decoration: underline;
+  font-weight: 600;
 }
 
-header ul li a {
+header .links li a {
+  color: #555;
   text-decoration: none;
-  color: #fff;
+  font-size: 17px;
   display: block;
 }
+/* end header styling */
 
-header ul li a:hover {
-  color: #00aaff;
-}
+/* start description styling */
 
-/* end header styling index.html */
-
-/* start main styling index.html */
-
-.main {
-  height: 100vh;
-  background-image: url("../images/main.jpg");
-  background-size: cover;
-}
-
-.main .overlay {
+.description {
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.main h1 {
-  opacity: 0;
-  color: #fff;
-  width: 50vw;
-  font-size: 50px;
+  height: calc(100vh - 140px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 50vh 20px 20px;
-  border-radius: 20px;
-  margin: 0 auto;
-  transition: padding 1s, opacity 1s;
 }
 
-.main h1 span {
-  color: #00aaff;
+/* styling description title */
+.description h1 {
+  font-size: 75px;
+  font-weight: 800;
 }
 
-.main p {
-  opacity: 0;
-  color: #bed0d9;
+.description h1 span {
+  background-image: linear-gradient(
+    to right,
+    rgb(248, 0, 145),
+    rgba(48, 0, 220, 0.867),
+    #0070f4
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* styling description paragraph */
+.description p {
   font-size: 20px;
-  width: 40vw;
-  text-align: center;
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 20px;
-  line-height: 1.5;
-  transition: opacity 1s 1s;
+  line-height: 2;
+  color: #222;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
-.main .btn {
+/* styling description buttons (encode and decode) */
+.description .buttons {
   display: flex;
   justify-content: center;
-  width: 100vw;
-  margin: 20px auto;
-  opacity: 0;
-  transition: opacity 1s 5s;
 }
 
-.main .btn a {
-  color: #fff;
-  text-decoration: none;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
+.description .buttons a {
+  display: block;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
   text-align: center;
+  margin: 0 10px;
   font-size: 18px;
-  border-radius: 10px;
-  margin: 0 5px;
+  text-decoration: none;
+  color: #222;
+  border-radius: 5px;
+  transition: background 0.4s;
 }
 
-.main .btn a:hover {
+.description .buttons .encode {
+  background-color: #000;
+  color: #fff;
+}
+
+.description .buttons .encode:hover {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-/* end main styling index.html */
-
-/* start styling yassine */
-
-.container {
-  background: #023047;
-  color: #eee;
-  padding-bottom : 20px;
-}
-.titel {
-  font-size: 32px;
-  font-weight: 900;
-  text-align: center;
-  color: #eee;
-  padding-top: 20px;
-}
-.htm-converter {
-  max-width: 700px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  font-family: "Roboto", sans-serif;
-}
-.htm-converter .input-text {
-  height: 350px;
-  width: 900px;
-  padding: 20px;
-  font-family: "Robote", sans-serif;
-  font-size: 18px;
-  list-style: 1.7;
-}
-.htm-converter .input-text {
-  resize: none;
-}
-.reult {
-  height: 350px;
-  width: 900px;
-  padding: 20px;
-  font-family: "Robote", sans-serif;
-  font-size: 18px;
-  list-style: 1.7;
-  overflow-y: scroll;
-}
-
-.return-btn,
-.saved-btn,
-.deletd-btn,
-.copyy-btn {
-  height: 30px;
-  width: 30px;
-  position: relative;
-  left: 750px;
-  cursor: pointer;
-}
-
-.heder2 {
-  font-size: 15px;
-  position: relative;
-  top: 30px;
-}
-.heder3 {
-  font-size: 15px;
-}
-.btn64 {
-  display : flex;
-  justify-content: space-between;
-}
-.btn64 .one {
+.description .buttons .decode {
+  background-color: #0070f4;
   color: #fff;
-  padding: 20px 80px;
-  background: green;
-  position: relative;
-  left: 150px;
-  font-size: 20px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-.btn64 :active {
-  top: 3px;
-}
-.tow {
-  color: #000;
-  padding: 20px 60px;
-  position: relative;
-  left: 150px;
-  font-size: 20px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-.there {
-  color: #000;
-  padding: 20px 60px;
-  position: relative;
-  left: 150px;
-  font-size: 20px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-.input-text-2 {
-  height: 350px;
-  width: 900px;
-  padding: 20px;
-  font-family: "Robote", sans-serif;
-  font-size: 18px;
-  list-style: 1.7;
-  resize: none;
-}
-.copy-btn {
-  height: 30px;
-  width: 30px;
-  position: relative;
-  left: 860px;
-  cursor: pointer;
-}
-.fore,
-.five {
-  color: #000;
-  padding: 15px 60px;
-  position: relative;
-  left: 350px;
-  font-size: 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  box-shadow: 0 6px;
-}
-.fore,
-.five :active {
-  top: 2px;
 }
 
-.load {
-  display : none;
+.description .buttons .decode:hover {
+  background-color: #0070f4db;
 }
+
+/* end description styling */
+
+/* start footer styling */
+
+footer {
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 18px;
+}
+
+/* end footer styling */
+
+/* start responsive for page index */
+
+/* very small devides less than 576px */
+@media (max-width: 575px) {
+  header {
+    padding: 0;
+  }
+
+  header .logo {
+    margin-left: 15px;
+  }
+
+  header .fa-bars {
+    display: block;
+    margin-right: 15px;
+  }
+
+  header .links {
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+    top: -500%;
+    background-color: #fff;
+    z-index: 3;
+    text-align: center;
+  }
+
+  .description h1 {
+    font-size: 30px;
+  }
+
+  .description p {
+    font-size: 12px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .description .buttons a {
+    font-size: 13px;
+    width: 140px;
+  }
+  .description .buttons .encode {
+    margin-bottom: 10px;
+  }
+
+  footer {
+    font-size: 13px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+  header {
+    padding: 0;
+  }
+
+  header .logo {
+    margin-left: 20px;
+  }
+
+  header .fa-bars {
+    display: block;
+    margin-right: 20px;
+  }
+
+  header .links {
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+    top: -500%;
+    background-color: #fff;
+    z-index: 3;
+    text-align: center;
+  }
+
+  .description h1 {
+    font-size: 45px;
+  }
+
+  .description p {
+    font-size: 15px;
+  }
+
+  .description .buttons a {
+    width: 140px;
+    font-size: 15px;
+  }
+
+  footer {
+    font-size: 15px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+  header {
+    padding: 0;
+  }
+
+  header .logo {
+    margin-left: 30px;
+  }
+
+  header .fa-bars {
+    display: block;
+    margin-right: 30px;
+  }
+
+  header .links {
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+    top: -500%;
+    background-color: #fff;
+    z-index: 3;
+    text-align: center;
+  }
+
+  .description h1 {
+    font-size: 60px;
+  }
+
+  .description p {
+    font-size: 18px;
+  }
+
+  .description .buttons a {
+    font-size: 17px;
+  }
+
+  footer {
+    font-size: 17px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  header {
+    padding: 0 50px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* end responsive for page index */
+
+/* end styling for page index */
+
