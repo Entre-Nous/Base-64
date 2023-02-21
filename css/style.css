@@ -16,7 +16,6 @@ body {
 
 /* end global styling */
 
-
 /* start styling of page index */
 
 /* start header styling */
@@ -157,6 +156,47 @@ header .links li a {
 }
 
 /* end description styling */
+
+/* start themes styling */
+
+.themes {
+  position: absolute;
+  top: 30%;
+  left: 0;
+}
+
+.themes .color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  left: -15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.themes .color:hover {
+  left: 0;
+}
+
+.themes .red {
+  top: 0;
+  background-color: #d4bff9;
+}
+.themes .blue {
+  top: 40px;
+  background-color: #ffddb0;
+}
+.themes .green {
+  top: 80px;
+  background-color: #f5b6da;
+}
+.themes .yellow {
+  top: 120px;
+  background-color: #c6f68d;
+}
+
+/* end themes styling  */
 
 /* start footer styling */
 

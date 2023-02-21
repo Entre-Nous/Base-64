@@ -1,9 +1,25 @@
 if (document.title === "Encode-Decode Base-64") {
   let btnShow = document.querySelector(".fa-bars");
   let menu = document.querySelector(".links");
+  let logo = document.querySelector(".logo");
 
   btnShow.onclick = () => {
     menu.classList.toggle("show-menu");
+  };
+
+  // choose the color of body
+  if (localStorage.getItem("color") !== null) {
+    document.body.style.backgroundColor = localStorage.getItem("color");
+  }
+  let divThemes = document.querySelector(".themes");
+
+  divThemes.onclick = function (e) {
+    localStorage.setItem("color", e.target.getAttribute("data-color"));
+    document.body.style.backgroundColor = localStorage.getItem("color");
+  };
+  logo.onclick = function () {
+    localStorage.setItem("color", "white");
+    document.body.style.background = localStorage.getItem("color");
   };
 } else if (document.title === "Encode-Base64") {
   // la page d'encodage
