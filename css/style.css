@@ -126,6 +126,7 @@ header .links li a {
   color: #222;
   margin-top: 30px;
   margin-bottom: 40px;
+  width: 60%;
 }
 
 /* styling description buttons (encode and decode) */
@@ -207,11 +208,11 @@ footer {
   }
 
   .description h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
 
   .description p {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .buttons {
@@ -219,15 +220,15 @@ footer {
   }
 
   .description .buttons a {
-    font-size: 13px;
-    width: 140px;
+    font-size: 16px;
+    width: 150px;
   }
   .description .buttons .encode {
     margin-bottom: 10px;
   }
 
   footer {
-    font-size: 13px;
+    font-size: 16px;
   }
 }
 
@@ -257,20 +258,7 @@ footer {
   }
 
   .description h1 {
-    font-size: 45px;
-  }
-
-  .description p {
-    font-size: 15px;
-  }
-
-  .description .buttons a {
-    width: 140px;
-    font-size: 15px;
-  }
-
-  footer {
-    font-size: 15px;
+    font-size: 60px;
   }
 }
 
@@ -300,19 +288,7 @@ footer {
   }
 
   .description h1 {
-    font-size: 60px;
-  }
-
-  .description p {
-    font-size: 18px;
-  }
-
-  .description .buttons a {
-    font-size: 17px;
-  }
-
-  footer {
-    font-size: 17px;
+    font-size: 65px;
   }
 }
 
@@ -330,4 +306,3 @@ footer {
 /* end responsive for page index */
 
 /* end styling for page index */
-
