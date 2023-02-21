@@ -306,3 +306,178 @@ footer {
 /* end responsive for page index */
 
 /* end styling for page index */
+
+/* start styling page encode (yassine) */
+
+.titel {
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+  color: #000;
+  margin: 16px;
+}
+.page {
+  background: #d9eee1;
+  height: 500px;
+  /* display: flex; */
+  /* flex-flow: row nowrap; */
+  /* flex-direction: row; */
+  justify-content: space-around;
+}
+.htm-converter1 {
+  width: 580px;
+  height: 480px;
+  background: gainsboro;
+  margin: 20px;
+  box-sizing: border-box;
+}
+.htm-converter2 {
+  width: 600px;
+  height: 480px;
+  position: absolute;
+  right: 0px;
+  top: 89px;
+  background: gainsboro;
+  margin: 20px;
+}
+
+.htm-converter1 .input-text {
+  height: 350px;
+  width: 580px;
+  padding: 20px;
+  font-family: "Robote", sans-serif;
+  font-size: 18px;
+  list-style: 1.7;
+}
+.htm-converter1 .input-text {
+  resize: none;
+}
+.reult {
+  height: 350px;
+  width: 570px;
+  padding: 20px;
+  font-family: "Robote", sans-serif;
+  font-size: 18px;
+  list-style: 1.7;
+  overflow-y: scroll;
+}
+.reult {
+  height: 350px;
+  width: 600px;
+  padding: 20px;
+  font-family: "Robote", sans-serif;
+  font-size: 18px;
+  list-style: 1.7;
+  overflow-y: scroll;
+}
+.list-copy {
+}
+.return-btn,
+.saved-btn,
+.deletd-btn,
+.copyy-btn {
+  height: 80px;
+  width: 80px;
+  font-size: 30px;
+  color: #000;
+  text-align: center;
+  position: relative;
+  left: 435px;
+  cursor: pointer;
+}
+
+.heder2 {
+  font-size: 20px;
+  position: relative;
+  top: 30px;
+  color: #000;
+}
+.heder3 {
+  font-size: 15px;
+  color: #000;
+}
+.btn64 {
+  justify-content: center;
+}
+.btn64 .one {
+  color: #fff;
+  padding: 10px 30px;
+  background: #04aa6d;
+  position: relative;
+  left: 150px;
+  font-size: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.btn64 :active {
+  top: 3px;
+}
+.htm-converter2 .input-text {
+  height: 350px;
+  width: 570px;
+  padding: 20px;
+  font-family: "Robote", sans-serif;
+  font-size: 18px;
+  list-style: 1.7;
+}
+.htm-converter2 .input-text {
+  resize: none;
+}
+.reult {
+  height: 350px;
+  width: 600px;
+  padding: 20px;
+  font-family: "Robote", sans-serif;
+  font-size: 18px;
+  list-style: 1.7;
+  overflow-y: scroll;
+}
+
+.input-text-2 {
+  height: 350px;
+  width: 600px;
+  padding: 20px;
+  font-family: "Robote", sans-serif;
+  font-size: 18px;
+  list-style: 1.7;
+  resize: none;
+}
+.copy-btn {
+  height: 30px;
+  width: 30px;
+  font-size: 30px;
+  color: #000;
+  position: relative;
+  left: 560px;
+  cursor: pointer;
+}
+.fore,
+.five {
+  background: #f2bb13;
+  color: #000;
+  padding: 10px 40px;
+  position: relative;
+  left: 100px;
+  font-size: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  /* box-shadow: 0 6px; */
+}
+.five {
+  background: #7f1533;
+  /* background: #054861; */
+  color: #fff;
+  padding: 10px 40px;
+  position: relative;
+  left: 100px;
+  font-size: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.fore,
+.five :active {
+  top: 3px;
+}
+
+/* end styling page encode (yassine) */
