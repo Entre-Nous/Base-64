@@ -18,6 +18,7 @@ if (document.title === "Encode-Decode Base-64") {
   let output = document.querySelector(".input-text-2");
   let encodeBtn = document.querySelector(".one");
   let downloadDecode = document.querySelector(".five");
+  let copyToClipboard = document.querySelector(".fore");
   let charDecode = document.querySelector(".char");
 
   // when the of encode page is load the text area is focus
@@ -37,13 +38,17 @@ if (document.title === "Encode-Decode Base-64") {
     navigator.clipboard.writeText(text.value);
   }
 
-// copy the text of input area
+  // copy the text of input area
   copyInput.onclick = function () {
     copyText(input);
   };
 
   // copy the text of output area
   copyOutput.onclick = function () {
+    copyText(output);
+  };
+
+  copyToClipboard.onclick = function () {
     copyText(output);
   };
 
@@ -57,7 +62,7 @@ if (document.title === "Encode-Decode Base-64") {
     clearText(input);
     clearText(output);
     calcCharacter(numberChar, input);
-    input
+    input.focus();
   };
 
   // download function
@@ -77,9 +82,9 @@ if (document.title === "Encode-Decode Base-64") {
   };
 
   // download the text of output area
-  downloadDecode.onclick = function() {
+  downloadDecode.onclick = function () {
     downloadFile(output);
-  }
+  };
 
   // function for choose a text file from the computer (fiha machkal)
   function loadFile(text) {
