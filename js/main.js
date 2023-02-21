@@ -10,7 +10,8 @@ if (document.title === "Encode-Decode Base-64") {
 
   let input = document.querySelector(".input-text");
   let numberChar = document.querySelector(".heder3");
-  let copy = document.querySelector(".copyy-btn");
+  let copyInput = document.querySelector(".copyy-btn");
+  let copyOutput = document.querySelector(".copy-btn");
   let clr = document.querySelector(".saved-btn");
   let download = document.querySelector(".deletd-btn");
   let chooseFile = document.querySelector("#load");
@@ -36,8 +37,14 @@ if (document.title === "Encode-Decode Base-64") {
     navigator.clipboard.writeText(text.value);
   }
 
-  copy.onclick = function () {
+// copy the text of input area
+  copyInput.onclick = function () {
     copyText(input);
+  };
+
+  // copy the text of output area
+  copyOutput.onclick = function () {
+    copyText(output);
   };
 
   // simple function for clear the text in the text area
@@ -48,7 +55,9 @@ if (document.title === "Encode-Decode Base-64") {
 
   clr.onclick = function () {
     clearText(input);
+    clearText(output);
     calcCharacter(numberChar, input);
+    input
   };
 
   // download function
@@ -62,9 +71,15 @@ if (document.title === "Encode-Decode Base-64") {
     a.click();
   }
 
+  // download the text of input area
   download.onclick = function () {
     downloadFile(input);
   };
+
+  // download the text of output area
+  downloadDecode.onclick = function() {
+    downloadFile(output);
+  }
 
   // function for choose a text file from the computer (fiha machkal)
   function loadFile(text) {
