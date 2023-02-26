@@ -16,6 +16,12 @@ body {
   top: 0 !important;
 }
 
+.active {
+  /* background: yellowgreen; */
+  font-weight: bold;
+  text-decoration: underline !important;
+}
+
 /* end global styling */
 
 /* start styling of page index */
@@ -75,6 +81,7 @@ header .links li a {
   font-size: 17px;
   display: block;
 }
+
 /* end header styling */
 
 /* start description styling */
@@ -96,12 +103,10 @@ header .links li a {
 }
 
 .description h1 span {
-  background-image: linear-gradient(
-    to right,
-    rgb(248, 0, 145),
-    rgba(48, 0, 220, 0.867),
-    #0070f4
-  );
+  background-image: linear-gradient(to right,
+      rgb(248, 0, 145),
+      rgba(48, 0, 220, 0.867),
+      #0070f4);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -o-background-clip: text;
@@ -185,14 +190,17 @@ header .links li a {
   top: 0;
   background-color: #d4bff9;
 }
+
 .themes .blue {
   top: 40px;
   background-color: #ffddb0;
 }
+
 .themes .green {
   top: 80px;
   background-color: #f5b6da;
 }
+
 .themes .yellow {
   top: 120px;
   background-color: #c6f68d;
@@ -254,6 +262,7 @@ footer {
     font-size: 16px;
     width: 150px;
   }
+
   .description .buttons .encode {
     margin-bottom: 10px;
   }
@@ -331,8 +340,7 @@ footer {
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-}
+@media (min-width: 1200px) {}
 
 /* end responsive for page index */
 
@@ -348,12 +356,10 @@ footer {
 }
 
 .title span {
-  background-image: linear-gradient(
-    to right,
-    rgb(248, 0, 145),
-    rgba(48, 0, 220, 0.867),
-    #0070f4
-  );
+  background-image: linear-gradient(to right,
+      rgb(248, 0, 145),
+      rgba(48, 0, 220, 0.867),
+      #0070f4);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -o-background-clip: text;
@@ -576,7 +582,6 @@ footer {
   }
 }
 
-@media (min-width: 1286px) {
-}
+@media (min-width: 1286px) {}
 
 /* end styling of page encode */

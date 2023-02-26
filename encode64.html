@@ -1,113 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Groupe Entre Nous" />
-    <meta
-      name="description"
-      content="Notre outil en ligne facilite l'encodage du texte en base64 ou le décodage de base64 en texte."
-    />
-    <script
-      src="https://kit.fontawesome.com/9f17b184ea.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Encode-Base64</title>
-  </head>
 
-  <body>
-    <!-- start header  -->
-    <header>
-      <!-- start logo -->
-      <div class="logo">
-        <a href="#">Base64</a>
-      </div>
-      <!-- end logo -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Groupe Entre Nous" />
+  <meta name="description"
+    content="Notre outil en ligne facilite l'encodage du texte en base64 ou le décodage de base64 en texte." />
+  <script src="https://kit.fontawesome.com/9f17b184ea.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Encode-Base64</title>
+</head>
 
-      <!-- bars of show and hide menu -->
-      <i class="fas fa-bars"></i>
+<body>
+  <!-- start header  -->
+  <header>
+    <!-- start logo -->
+    <div class="logo">
+      <a href="#">Base64</a>
+    </div>
+    <!-- end logo -->
 
-      <!-- start of menu -->
-      <ul class="links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="encode64.html">Encode</a></li>
-        <li><a href="Decod64.html">Decode</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <!-- end of menu -->
-    </header>
-    <!-- end header -->
+    <!-- bars of show and hide menu -->
+    <i class="fas fa-bars"></i>
 
-    <!-- titre de la page  -->
-    <div class="title"><span>Base64</span> Encode</div>
+    <!-- start of menu -->
+    <ul class="links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a class="active" href="encode64.html">Encode</a></li>
+      <li><a href="Decod64.html">Decode</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <!-- end of menu -->
+  </header>
+  <!-- end header -->
 
-    <!-- conteneur de les deux section text entré et text encodé -->
-    <div class="container">
-      <!-- la section droit contient le text aria de text entré -->
-      <div class="input-side">
-        <!-- la partie haut contien le titre entrer le texte .... et les icons -->
-        <div class="header-input">
-          <!-- le titre -->
-          <h3>Entrez le texte à encoder en Base64</h3>
+  <!-- titre de la page  -->
+  <div class="title"><span>Base64</span> Encode</div>
 
-          <!-- les icons -->
-          <div class="icons">
-            <label for="load" class="fa-solid fa-upload"></label>
-            <input type="file" id="load" />
-            <i class="fa-solid fa-delete-left"></i>
-            <i class="fa-solid fa-file-arrow-down"></i>
-            <i class="fa-solid fa-copy"></i>
-          </div>
-        </div>
+  <!-- conteneur de les deux section text entré et text encodé -->
+  <div class="container">
+    <!-- la section droit contient le text aria de text entré -->
+    <div class="input-side">
+      <!-- la partie haut contien le titre entrer le texte .... et les icons -->
+      <div class="header-input">
+        <!-- le titre -->
+        <h3>Entrez le texte à encoder en Base64</h3>
 
-        <!-- le text aria de texte entré -->
-        <textarea class="input-text"></textarea>
-
-        <!-- la partie bas contien le nombre de caractères -->
-        <div class="footer-input">
-          <p class="counter">size 0, 0 characters</p>
+        <!-- les icons -->
+        <div class="icons">
+          <label for="load" class="fa-solid fa-upload"></label>
+          <input type="file" id="load" />
+          <i class="fa-solid fa-delete-left"></i>
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <i class="fa-solid fa-copy"></i>
         </div>
       </div>
 
-      <!-- le button pour encodé -->
-      <button class="encode">Encode</button>
+      <!-- le text aria de texte entré -->
+      <textarea class="input-text"></textarea>
 
-      <!-- la section gauche contien le text aria de text encodé -->
-      <div class="output-side">
-        <div class="header-output">
-          <!-- le titre -->
-          <h3>la résultat de texte encodé</h3>
-
-          <!-- les icons -->
-          <div class="icons">
-            <i class="fa-solid fa-download"></i>
-            <i class="fa-solid fa-copy"></i>
-          </div>
-        </div>
-
-        <!-- le text aria de texte entré -->
-        <textarea class="output-text"></textarea>
-
-        <!-- la partie bas contien le nombre de caractères -->
-        <div class="footer-output">
-          <p class="counter">size 0, 0 characters</p>
-        </div>
+      <!-- la partie bas contien le nombre de caractères -->
+      <div class="footer-input">
+        <p class="counter">size 0, 0 characters</p>
       </div>
     </div>
-    <!-- start footer -->
-    <footer>
-      <p>&copy 2023 Groupe entre nous. tout droits réservés</p>
-    </footer>
-    <!-- end footer -->
 
-    <script src="js/main.js"></script>
-  </body>
+    <!-- le button pour encodé -->
+    <button class="encode">Encode</button>
+
+    <!-- la section gauche contien le text aria de text encodé -->
+    <div class="output-side">
+      <div class="header-output">
+        <!-- le titre -->
+        <h3>la résultat de texte encodé</h3>
+
+        <!-- les icons -->
+        <div class="icons">
+          <i class="fa-solid fa-download"></i>
+          <i class="fa-solid fa-copy"></i>
+        </div>
+      </div>
+
+      <!-- le text aria de texte entré -->
+      <textarea class="output-text"></textarea>
+
+      <!-- la partie bas contien le nombre de caractères -->
+      <div class="footer-output">
+        <p class="counter">size 0, 0 characters</p>
+      </div>
+    </div>
+  </div>
+  <!-- start footer -->
+  <footer>
+    <p>&copy 2023 Groupe entre nous. tout droits réservés</p>
+  </footer>
+  <!-- end footer -->
+
+  <script src="js/main.js"></script>
+</body>
+
 </html>
