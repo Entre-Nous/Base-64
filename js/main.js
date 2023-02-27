@@ -24,28 +24,26 @@ if (document.title === "Encode-Decode Base-64") {
 } else if (document.title === "Encode-Base64") {
   // la page d'encodage
 
-  let input = document.querySelector(".input-text");
-  let numberChar = document.querySelector(".heder3");
-  let copyInput = document.querySelector(".copyy-btn");
-  let copyOutput = document.querySelector(".copy-btn");
-  let clr = document.querySelector(".saved-btn");
-  let download = document.querySelector(".deletd-btn");
-  let chooseFile = document.querySelector("#load");
-  let output = document.querySelector(".input-text-2");
-  let encodeBtn = document.querySelector(".one");
-  let downloadDecode = document.querySelector(".five");
-  let copyToClipboard = document.querySelector(".fore");
-  let charDecode = document.querySelector(".char");
+  let inputText = document.querySelector(".input-text");
+  let numberChar = document.querySelectorAll(".counter");
+  let copy = document.querySelectorAll(".fa-copy");
+  let clr = document.querySelector(".fa-delete-left");
+  let download = document.querySelector(".fa-file-arrow-down");
+  let chooseFile = document.getElementById("load");
+  let outputText = document.querySelector(".output-text");
+  let encodeBtn = document.querySelector(".encode");
+  let downloadDecode = document.querySelector(".fa-download");
 
   // when the of encode page is load the text area is focus
-  input.focus();
+  inputText.focus();
 
   // for calculating the number of character in the text area
   function calcCharacter(text, zone) {
     text.textContent = `Size: ${zone.value.length} , ${zone.value.length} Characters`;
   }
-  input.oninput = function () {
-    calcCharacter(numberChar, input);
+
+  inputText.oninput = function () {
+    calcCharacter(numberChar[0], inputText);
   };
 
   // function for select the text and copy it
@@ -55,17 +53,13 @@ if (document.title === "Encode-Decode Base-64") {
   }
 
   // copy the text of input area
-  copyInput.onclick = function () {
-    copyText(input);
+  copy[0].onclick = function () {
+    copyText(inputText);
   };
 
   // copy the text of output area
-  copyOutput.onclick = function () {
-    copyText(output);
-  };
-
-  copyToClipboard.onclick = function () {
-    copyText(output);
+  copy[1].onclick = function () {
+    copyText(outputText);
   };
 
   // simple function for clear the text in the text area
@@ -75,10 +69,11 @@ if (document.title === "Encode-Decode Base-64") {
   }
 
   clr.onclick = function () {
-    clearText(input);
-    clearText(output);
-    calcCharacter(numberChar, input);
-    input.focus();
+    clearText(inputText);
+    clearText(outputText);
+    calcCharacter(numberChar[0], inputText);
+    calcCharacter(numberChar[1], outputText);
+    inputText.focus();
   };
 
   // download function
@@ -94,12 +89,12 @@ if (document.title === "Encode-Decode Base-64") {
 
   // download the text of input area
   download.onclick = function () {
-    downloadFile(input);
+    downloadFile(inputText);
   };
 
   // download the text of output area
   downloadDecode.onclick = function () {
-    downloadFile(output);
+    downloadFile(outputText);
   };
 
   // function for choose a text file from the computer (fiha machkal)
@@ -116,9 +111,10 @@ if (document.title === "Encode-Decode Base-64") {
     let filRea = new FileReader();
     filRea.readAsText(this.files[0]);
     filRea.onload = function () {
-      input.value = filRea.result;
+      inputText.value = filRea.result;
+      calcCharacter(numberChar[0], inputText);
+
     };
-    calcCharacter(numberChar, input);
   };
 
   // function for encoding text to base64
@@ -128,14 +124,14 @@ if (document.title === "Encode-Decode Base-64") {
 
   //when click on button encodeBtn call function of encode
   encodeBtn.onclick = function () {
-    output.value = encodeBase64(input);
+    outputText.value = encodeBase64(inputText);
     // calcult the number of character of decode result
-    calcCharacter(charDecode, output);
+    calcCharacter(numberChar[1], outputText);
   };
 
   // when click on button download call function downloadFile for
   // downloading result of encode
   downloadDecode.onclick = function () {
-    downloadFile(output);
+    downloadFile(outputText);
   };
 }
