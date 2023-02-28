@@ -2,88 +2,105 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decode-Base64</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Groupe Entre Nous" />
+    <meta name="description"
+        content="Notre outil en ligne facilite l'encodage du texte en base64 ou le décodage de base64 en texte." />
     <script src="https://kit.fontawesome.com/9f17b184ea.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Decode-Base64</title>
 </head>
 
 <body>
+    <!-- start header  -->
+    <header>
+        <!-- start logo -->
+        <div class="logo">
+            <a href="#">Base64</a>
+        </div>
+        <!-- end logo -->
+
+        <!-- bars of show and hide menu -->
+        <i class="fas fa-bars"></i>
+
+        <!-- start of menu -->
+        <ul class="links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="encode64.html">Encode</a></li>
+            <li><a class="active" href="Decod64.html">Decode</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <!-- end of menu -->
+    </header>
+    <!-- end header -->
+
+    <!-- titre de la page  -->
+    <div class="title"><span>Base64</span> Encode</div>
+
+    <!-- conteneur de les deux section text entré et text encodé -->
     <div class="container">
-        <div class="titel">
-            <h1>Bases 64 Encode</h1>
-            <div class="liste-love"></div>
-        </div>
+        <!-- la section droit contient le text aria de text entré -->
+        <div class="input-side">
+            <!-- la partie haut contien le titre entrer le texte .... et les icons -->
+            <div class="header-input">
+                <!-- le titre -->
+                <h3>Entrez le texte à encoder en Base64</h3>
 
-
-        <div class="htm-converter">
-            <div class="liste-copy">
-                <!-- <h2>Enter the text to Base64 Encod</h2> -->
-                <div class="liste-simpal">
-                    <h2 class="heder2">Enter the text to Base64 Decod</h2>
-
-                    <button class="return-btn"><i class="fa-solid fa-upload"></i></button>
-                    <button class="saved-btn"><i class="fa-solid fa-trash-can"></i></button>
-                    <button class="deletd-btn"><i class="fa-solid fa-floppy-disk"></i> </button>
-                    <button class="copyy-btn"> <i class="fa-solid fa-copy"></i></button>
-
-
-
+                <!-- les icons -->
+                <div class="icons">
+                    <label title="ouvrir" for="load" class="fa-solid fa-upload"></label>
+                    <input type="file" id="load" />
+                    <i title="supprimer" class="fa-solid fa-trash-can"></i>
+                    <i title="télécharger" class="fa-solid fa-download"></i>
+                    <i title="copie" class="fa-solid fa-copy"></i>
                 </div>
             </div>
 
+            <!-- le text aria de texte entré -->
             <textarea class="input-text"></textarea>
-            <h3 class="heder3">Siz:0, 0Charcters</h3>
 
-            <div class="btn64">
-                <button class="one" type="button">
-                    <span>Bases 64 Decode</span>
-                    <ion-icon name="log-out-outline"><ion-icon></ion-icon>
-                </button>
-                <button class="tow">
-                    <span>File</span>
-                    <ion-icon></ion-icon>
-
-                </button>
-                <button class="there">
-                    <span>Load URL</span>
-                    <ion-icon></ion-icon>
-
-                </button>
+            <!-- la partie bas contien le nombre de caractères -->
+            <div class="footer-input">
+                <p class="counter">size 0, 0 characters</p>
             </div>
-            <div class="">
-                <h2 class="heder2">Enter the text to Base64 Decod</h2>
-                <button class="copy-btn"><i class="fa-solid fa-copy"></i> </button>
+        </div>
 
+        <!-- le button pour encodé -->
+        <button class="encode">Decode</button>
 
-                <div class="copy-input-text-2">
-                    <textarea class="input-text-2"></textarea>
-                    <h3>Siz:0, 0Charcters</h3>
+        <!-- la section gauche contien le text aria de text encodé -->
+        <div class="output-side">
+            <div class="header-output">
+                <!-- le titre -->
+                <h3>la résultat de texte encodé</h3>
 
+                <!-- les icons -->
+                <div class="icons">
+                    <i title="télécharger" class="fa-solid fa-download"></i>
+                    <i title="copie" class="fa-solid fa-copy"></i>
                 </div>
             </div>
 
-            <div class="result-outer">
-                <button class="fore">
+            <!-- le text aria de texte entré -->
+            <textarea class="output-text" readonly></textarea>
 
-                    <span>Copy To Clipboard</span>
-                    <ion-icon></ion-icon>
-
-                </button>
-                <button class="five">
-
-                    <span>Downlad</span>
-                    <ion-icon></ion-icon>
-
-                </button>
-
+            <!-- la partie bas contien le nombre de caractères -->
+            <div class="footer-output">
+                <p class="counter">size 0, 0 characters</p>
             </div>
-
         </div>
     </div>
-    </div>
+    <!-- start footer -->
+    <footer>
+        <p>&copy 2023 Groupe entre nous. tout droits réservés</p>
+    </footer>
+    <!-- end footer -->
 
     <script src="js/main.js"></script>
 </body>
