@@ -6,6 +6,55 @@ btnShow.onclick = () => {
   menu.classList.toggle("show-menu");
 };
 
+// functions
+
+// for calculating the number of character in the text area
+function calcCharacter(text, zone) {
+  text.textContent = `Size: ${zone.value.length} , ${zone.value.length} Characters`;
+}
+
+// function for select the text and copy it
+function copyText(text) {
+  text.select();
+  navigator.clipboard.writeText(text.value);
+}
+
+// simple function for clear the text in the text area
+function clearText(text) {
+  text.value = "";
+  text.focus();
+}
+
+// download function
+function downloadFile(text, fileName) {
+  let blob = new Blob([text.value], { type: "text/plain" });
+  let url = URL.createObjectURL(blob);
+  let a = document.createElement("a");
+  a.href = url;
+  a.download = fileName;
+  document.body.appendChild(a);
+  a.click();
+}
+
+// function for choose a text file from the computer (fiha machkal)
+function loadFile(text) {
+  let filRea = new FileReader();
+  filRea.readAsText(this.files[0]);
+  filRea.onload = function () {
+    text.value = filRea.result;
+  };
+}
+
+// function for encoding text to base64
+function encodeBase64(text) {
+  return btoa(text.value);
+}
+
+// function for encoding text to base64
+function decodeBase64(text) {
+  return atob(text.value);
+}
+
 if (document.title === "Encode-Decode Base-64") {
   // choose the color of body
   if (localStorage.getItem("color") !== null) {
@@ -36,20 +85,9 @@ if (document.title === "Encode-Decode Base-64") {
   // when the of encode page is load the text area is focus
   inputText.focus();
 
-  // for calculating the number of character in the text area
-  function calcCharacter(text, zone) {
-    text.textContent = `Size: ${zone.value.length} , ${zone.value.length} Characters`;
-  }
-
   inputText.oninput = function () {
     calcCharacter(numberChar[0], inputText);
   };
-
-  // function for select the text and copy it
-  function copyText(text) {
-    text.select();
-    navigator.clipboard.writeText(text.value);
-  }
 
   // copy the text of input area
   copy[0].onclick = function () {
@@ -61,12 +99,6 @@ if (document.title === "Encode-Decode Base-64") {
     copyText(outputText);
   };
 
-  // simple function for clear the text in the text area
-  function clearText(text) {
-    text.value = "";
-    text.focus();
-  }
-
   clr.onclick = function () {
     clearText(inputText);
     clearText(outputText);
@@ -74,17 +106,6 @@ if (document.title === "Encode-Decode Base-64") {
     calcCharacter(numberChar[1], outputText);
     inputText.focus();
   };
-
-  // download function
-  function downloadFile(text, fileName) {
-    let blob = new Blob([text.value], { type: "text/plain" });
-    let url = URL.createObjectURL(blob);
-    let a = document.createElement("a");
-    a.href = url;
-    a.download = fileName;
-    document.body.appendChild(a);
-    a.click();
-  }
 
   // download the text of input area
   download[0].onclick = function () {
@@ -104,15 +125,6 @@ if (document.title === "Encode-Decode Base-64") {
     }
   };
 
-  // function for choose a text file from the computer (fiha machkal)
-  function loadFile(text) {
-    let filRea = new FileReader();
-    filRea.readAsText(this.files[0]);
-    filRea.onload = function () {
-      text.value = filRea.result;
-    };
-  }
-
   // function for choose a text file from the computer
   chooseFile.onchange = function () {
     let filRea = new FileReader();
@@ -123,17 +135,13 @@ if (document.title === "Encode-Decode Base-64") {
     };
   };
 
-  // function for encoding text to base64
-  function encodeBase64(text) {
-    return btoa(text.value);
-  }
-
   //when click on button encodeBtn call function of encode
   encodeBtn.onclick = function () {
     outputText.value = encodeBase64(inputText);
     // calcult the number of character of decode result
     calcCharacter(numberChar[1], outputText);
   };
+
 } else if (document.title === "Decode-Base64") {
   // la page décodage
 
@@ -149,20 +157,9 @@ if (document.title === "Encode-Decode Base-64") {
   // when the of encode page is load the text area is focus
   inputText.focus();
 
-  // for calculating the number of character in the text area
-  function calcCharacter(text, zone) {
-    text.textContent = `Size: ${zone.value.length} , ${zone.value.length} Characters`;
-  }
-
   inputText.oninput = function () {
     calcCharacter(numberChar[0], inputText);
   };
-
-  // function for select the text and copy it
-  function copyText(text) {
-    text.select();
-    navigator.clipboard.writeText(text.value);
-  }
 
   // copy the text of input area
   copy[0].onclick = function () {
@@ -174,12 +171,6 @@ if (document.title === "Encode-Decode Base-64") {
     copyText(outputText);
   };
 
-  // simple function for clear the text in the text area
-  function clearText(text) {
-    text.value = "";
-    text.focus();
-  }
-
   clr.onclick = function () {
     clearText(inputText);
     clearText(outputText);
@@ -187,17 +178,6 @@ if (document.title === "Encode-Decode Base-64") {
     calcCharacter(numberChar[1], outputText);
     inputText.focus();
   };
-
-  // download function
-  function downloadFile(text, fileName) {
-    let blob = new Blob([text.value], { type: "text/plain" });
-    let url = URL.createObjectURL(blob);
-    let a = document.createElement("a");
-    a.href = url;
-    a.download = fileName;
-    document.body.appendChild(a);
-    a.click();
-  }
 
   // download the text of input area
   download[0].onclick = function () {
@@ -217,15 +197,6 @@ if (document.title === "Encode-Decode Base-64") {
     }
   };
 
-  // function for choose a text file from the computer (fiha machkal)
-  function loadFile(text) {
-    let filRea = new FileReader();
-    filRea.readAsText(this.files[0]);
-    filRea.onload = function () {
-      text.value = filRea.result;
-    };
-  }
-
   // function for choose a text file from the computer
   chooseFile.onchange = function () {
     let filRea = new FileReader();
@@ -237,13 +208,13 @@ if (document.title === "Encode-Decode Base-64") {
   };
 
   // function for encoding text to base64
-  function encodeBase64(text) {
+  function decodeBase64(text) {
     return atob(text.value);
   }
 
-  //when click on button encodeBtn call function of encode
+  //when click on button decodeBtn call function of decode
   encodeBtn.onclick = function () {
-    outputText.value = encodeBase64(inputText);
+    outputText.value = decodeBase64(inputText);
     // calcult the number of character of decode result
     calcCharacter(numberChar[1], outputText);
   };
