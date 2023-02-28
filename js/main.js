@@ -1,12 +1,12 @@
+let btnShow = document.querySelector(".fa-bars");
+let menu = document.querySelector(".links");
+let logo = document.querySelector(".logo");
+
+btnShow.onclick = () => {
+  menu.classList.toggle("show-menu");
+};
+
 if (document.title === "Encode-Decode Base-64") {
-  let btnShow = document.querySelector(".fa-bars");
-  let menu = document.querySelector(".links");
-  let logo = document.querySelector(".logo");
-
-  btnShow.onclick = () => {
-    menu.classList.toggle("show-menu");
-  };
-
   // choose the color of body
   if (localStorage.getItem("color") !== null) {
     document.body.style.backgroundColor = localStorage.getItem("color");
@@ -27,12 +27,11 @@ if (document.title === "Encode-Decode Base-64") {
   let inputText = document.querySelector(".input-text");
   let numberChar = document.querySelectorAll(".counter");
   let copy = document.querySelectorAll(".fa-copy");
-  let clr = document.querySelector(".fa-delete-left");
-  let download = document.querySelector(".fa-file-arrow-down");
+  let clr = document.querySelector(".fa-trash-can");
+  let download = document.querySelectorAll(".fa-download");
   let chooseFile = document.getElementById("load");
   let outputText = document.querySelector(".output-text");
   let encodeBtn = document.querySelector(".encode");
-  let downloadDecode = document.querySelector(".fa-download");
 
   // when the of encode page is load the text area is focus
   inputText.focus();
@@ -77,24 +76,32 @@ if (document.title === "Encode-Decode Base-64") {
   };
 
   // download function
-  function downloadFile(text) {
+  function downloadFile(text, fileName) {
     let blob = new Blob([text.value], { type: "text/plain" });
     let url = URL.createObjectURL(blob);
     let a = document.createElement("a");
     a.href = url;
-    a.download = "file.txt";
+    a.download = fileName;
     document.body.appendChild(a);
     a.click();
   }
 
   // download the text of input area
-  download.onclick = function () {
-    downloadFile(inputText);
+  download[0].onclick = function () {
+    if (inputText.value !== "") {
+      downloadFile(inputText, "text-normal");
+    } else {
+      alert("le zone de texte est vide !!");
+    }
   };
 
   // download the text of output area
-  downloadDecode.onclick = function () {
-    downloadFile(outputText);
+  download[1].onclick = function () {
+    if (outputText.value !== "") {
+      downloadFile(outputText, "resultat-encodage");
+    } else {
+      alert("la zone de text est vide !!");
+    }
   };
 
   // function for choose a text file from the computer (fiha machkal)
@@ -113,7 +120,6 @@ if (document.title === "Encode-Decode Base-64") {
     filRea.onload = function () {
       inputText.value = filRea.result;
       calcCharacter(numberChar[0], inputText);
-
     };
   };
 
@@ -127,11 +133,5 @@ if (document.title === "Encode-Decode Base-64") {
     outputText.value = encodeBase64(inputText);
     // calcult the number of character of decode result
     calcCharacter(numberChar[1], outputText);
-  };
-
-  // when click on button download call function downloadFile for
-  // downloading result of encode
-  downloadDecode.onclick = function () {
-    downloadFile(outputText);
   };
 }
