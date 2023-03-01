@@ -47,12 +47,10 @@ header .logo a {
 }
 
 header .logo a:hover {
-  background-image: linear-gradient(
-    to right,
-    rgb(248, 0, 145),
-    rgba(48, 0, 220, 0.867),
-    #0070f4
-  );
+  background-image: linear-gradient(to right,
+      rgb(248, 0, 145),
+      rgba(48, 0, 220, 0.867),
+      #0070f4);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -o-background-clip: text;
@@ -122,12 +120,10 @@ header .links li a:hover {
 }
 
 .description h1 span {
-  background-image: linear-gradient(
-    to right,
-    rgb(248, 0, 145),
-    rgba(48, 0, 220, 0.867),
-    #0070f4
-  );
+  background-image: linear-gradient(to right,
+      rgb(248, 0, 145),
+      rgba(48, 0, 220, 0.867),
+      #0070f4);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -o-background-clip: text;
@@ -361,8 +357,7 @@ footer {
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-}
+@media (min-width: 1200px) {}
 
 /* end responsive for page index */
 
@@ -378,12 +373,10 @@ footer {
 }
 
 .title span {
-  background-image: linear-gradient(
-    to right,
-    rgb(248, 0, 145),
-    rgba(48, 0, 220, 0.867),
-    #0070f4
-  );
+  background-image: linear-gradient(to right,
+      rgb(248, 0, 145),
+      rgba(48, 0, 220, 0.867),
+      #0070f4);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -o-background-clip: text;
@@ -619,7 +612,76 @@ footer {
   }
 }
 
-@media (min-width: 1295px) {
-}
+@media (min-width: 1295px) {}
 
 /* end styling of page encode */
+
+/* section contact  */
+
+.contact {
+  padding: 60px 0px 0px 0px;
+  min-height: calc(100vh - (140px));
+}
+
+.form-contact {
+  /* border: 1px solid #ccc; */
+  padding: 0px 20px 0px 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.form-contact form label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+}
+
+.form-contact form textarea {
+  min-height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  padding: 12px;
+}
+
+.form-contact form input {
+  height: 40px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form h4 {
+  font-weight: 500;
+}
+
+.px {
+  text-align: center;
+}
+
+.my {
+  margin-bottom: 20px;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+}
+
+.btn {
+  padding: 0px 10px 0px 10px;
+  height: 50px;
+  width: 100px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-weight: 800;
+}
+
+.btn:hover {
+  background: #222;
+  color: white;
+  font-weight: bold;
+}
