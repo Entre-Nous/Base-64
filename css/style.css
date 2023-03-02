@@ -623,3 +623,96 @@ footer {
 }
 
 /* end styling of page encode */
+
+/* start styling conact */
+
+/* start contact */
+
+.shape {
+  position: absolute;
+  width: 100%;
+  height: 600px;
+  background-color: red;
+  clip-path: polygon(120% 0%, 100% 100%, -127% 100%);
+  background-image: linear-gradient(to left, #0070f4, #69aaf4);
+}
+
+.contact {
+  position: relative;
+  width: 70%;
+  display: flex;
+  box-shadow: 3px 5px 5px #aaa;
+  margin: 20px auto;
+  background-color: #fff;
+}
+
+.contact .image-text {
+  background-color: #495c6a;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact .image-text img {
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+.contact .image-text p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.contact .infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  padding: 40px 0;
+}
+
+.contact .infos h1 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.contact .infos input,
+.contact .infos textarea {
+  width: 90%;
+  padding: 20px;
+  font-size: 18px;
+  background-color: #eef3fa;
+  border: none;
+  outline: none;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+.contact .infos textarea {
+  height: 150px;
+}
+
+.contact .infos button {
+  background-color: #0286bf;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 20px 40px;
+  cursor: pointer;
+  transition: background 0.4s;
+  border-radius: 5px;
+}
+
+.contact .infos button:hover {
+  background-color: #495c6a;
+}
+
+/* end styling contact */
